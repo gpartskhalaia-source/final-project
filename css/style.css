@@ -1,0 +1,21 @@
+a {
+    text-decoration: none;
+}
+
+li{
+    display: inline-block;
+}
+
+.logo-img{
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.nav-page {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 150px;
+}
