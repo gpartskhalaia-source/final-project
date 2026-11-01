@@ -9,6 +9,14 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+:root {
+    --maincolor: white;
+    --hovercolor:#C8FF8A;
+    --btncolor: #102A3A;
+
+
+}
+
 .background {
     background-image: url("../images/Sunset Mountain Lake Campsite.png");
     background-size: cover;
@@ -48,19 +56,19 @@ header {
 
 .nav-page a {
     text-decoration: none;
-    color: white;
+    color: var(--maincolor);
     font-size: 16px;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-page a:hover {
-    color: #C8FF8A;
+    color: var(--hovercolor);
 }
 
 .plan-btn {
-    background-color: #C8FF8A;
-    color: #102A3A;
+    background-color: var(--hovercolor);
+    color: var(--btncolor);
     padding: 10px 18px;
     border-radius: 30px;
     font-size: 14px;
@@ -70,7 +78,7 @@ header {
 }
 
 .plan-btn:hover {
-    background-color: white;
+    background-color: var(--maincolor);
 }
 
 /* MAIN */
@@ -87,7 +95,7 @@ header {
     top: 220px;
     left: 70px;
     margin: 0;
-    color: white;
+    color: var(--maincolor);
     font-size: 64px;
     font-weight: 700;
     line-height: 1.2;
@@ -95,7 +103,7 @@ header {
 }
 
 .span-h1 {
-    color: #C8FF8A;
+    color: var(--hovercolor);
 }
 
 .main-img {
@@ -103,6 +111,15 @@ header {
     width: 100%;
     height: auto;
     margin-top: 20px;
-    border: 8px solid white;
+    border: 8px solid var(--maincolor);
     border-radius: 30px;
+}
+
+/* FOOTER */
+
+.about-footer {
+    background-color: #071F2B;
+    color: white;
+    text-align: center;
+    padding: 25px;
 }

@@ -1,0 +1,180 @@
+
+/* ABOUT US HEADER */
+
+.about-header {
+    background-color: #102A3A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.about-logo {
+    width: 180px;
+}
+
+.about-nav ul {
+    display: flex;
+    gap: 35px;
+}
+
+.about-nav li {
+    margin: 0;
+}
+
+.about-nav a {
+    color: white;
+    font-size: 14px;
+}
+
+.about-nav a:hover {
+    color: #C8FF8A;
+}
+
+.about-header .plan-btn {
+    background-color: #C8FF8A;
+    color: #102A3A;
+    padding: 12px 25px;
+    border-radius: 30px;
+}
+
+/* ABOUT INTRO */
+
+.about-intro {
+    background-color: #F2F8F4;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.about-intro h1 {
+    font-size: 50px;
+    color: #102A3A;
+    margin-bottom: 20px;
+}
+
+.about-intro p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* OUR STORY */
+
+.our-story {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 30px;
+}
+
+.story-text {
+    width: 50%;
+}
+
+.story-text h2 {
+    font-size: 36px;
+    color: #102A3A;
+    margin-bottom: 20px;
+}
+
+.story-text p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.story-image {
+    width: 50%;
+}
+
+.story-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* OUR VALUES */
+
+.our-values {
+    background-color: #F2F8F4;
+    padding: 80px 30px;
+    text-align: center;
+}
+
+.our-values h2 {
+    font-size: 36px;
+    color: #102A3A;
+    margin-bottom: 40px;
+}
+
+.values-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.value-card {
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.value-card h3 {
+    font-size: 24px;
+    color: #102A3A;
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.value-card:hover {
+    background-color: #C8FF8A;
+}
+
+/* CALL TO ACTION */
+
+.about-cta {
+    background-color: #102A3A;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.about-cta h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.about-cta p {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.about-cta .explore-btn {
+    display: inline-block;
+    background-color: #C8FF8A;
+    color: #102A3A;
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+
+.about-cta .explore-btn:hover {
+    background-color: white;
+}
+
+/* FOOTER */
+
+.about-footer {
+    background-color: #071F2B;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+

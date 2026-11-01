@@ -1,0 +1,54 @@
+
+/* DESTINATIONS HEADER */
+
+.destination-header {
+    background-color: #102A3A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+/* LOGO */
+
+.destination-logo {
+    width: 180px;
+}
+
+/* NAVIGATION */
+
+.destination-nav ul {
+    display: flex;
+    gap: 35px;
+}
+
+.destination-nav li {
+    margin: 0;
+}
+
+.destination-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.destination-nav a:hover {
+    color: #C8FF8A;
+}
+
+/* BUTTON */
+
+.destination-header .plan-btn {
+    text-decoration: none;
+    background-color: #C8FF8A;
+    color: #102A3A;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.destination-header .plan-btn:hover {
+    background-color: white;
+}
