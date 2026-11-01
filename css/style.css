@@ -1,69 +1,94 @@
+
+/* GENERAL STYLES */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Poppins", sans-serif;
 }
 
 .background {
-    background-image:url(../images/Sunset\ Mountain\ Lake\ Campsite.png) ;
-}
-a {
-    text-decoration: none;
-    color: #234E52;
+    background-image: url("../images/Sunset Mountain Lake Campsite.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-li {
-    display: inline-block;
-    margin-right: 70px;
-    
-}
-a {
-    color: white;
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px 70px;
 }
 
 .logo-img {
     width: 190px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 50px;
-    margin-top: 5px;
-    
 }
+
+
+/* NAVIGATION */
 
 .nav-page {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 50px;
-    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-page ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-page a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-page a:hover {
+    color: #C8FF8A;
 }
 
 
+/* MAIN */
 
-.main{
+.main {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
-    height: auto;
     position: relative;
 }
 
 .main h1 {
-    color: white;
     position: absolute;
-    margin-top: 220px;
-    margin-left: 70px;
+    top: 220px;
+    left: 70px;
+    margin: 0;
+    color: white;
     font-size: 64px;
     font-weight: 700;
-    
-    
+    line-height: 1.2;
+    z-index: 1;
 }
 
 .span-h1 {
-    color:#C8FF8A
+    color: #C8FF8A;
 }
+
 .main-img {
     display: block;
     width: 100%;
+    height: auto;
     margin-top: 20px;
     border: 8px solid white;
     border-radius: 30px;
-
 }
