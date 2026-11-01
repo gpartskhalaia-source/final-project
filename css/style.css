@@ -1,3 +1,10 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.background {
+    background-image:url(../images/Sunset\ Mountain\ Lake\ Campsite.png) ;
+}
 a {
     text-decoration: none;
     color: #234E52;
@@ -6,14 +13,19 @@ a {
 li {
     display: inline-block;
     margin-right: 70px;
+    
+}
+a {
+    color: white;
 }
 
 .logo-img {
-    width: 50px;
+    width: 190px;
     display: inline-block;
     vertical-align: middle;
     margin-left: 50px;
     margin-top: 5px;
+    
 }
 
 .nav-page {
@@ -22,17 +34,11 @@ li {
     margin-left: 50px;
     
 }
-h3 {
-    display: inline-block;
-    color: #C8FF8A;;
-    text-decoration: none;
-    font-size: 26px;
-    font-weight: 700;
-}
+
 
 
 .main{
-    max-width: 1300px;
+    max-width: 1400px;
     width: 100%;
     margin: 0 auto;
     height: auto;
@@ -46,17 +52,18 @@ h3 {
     margin-left: 70px;
     font-size: 64px;
     font-weight: 700;
-    font-family: 'Courier New', Courier, monospace;
+    
     
 }
 
 .span-h1 {
-    color:#C8FF8A;
+    color:#C8FF8A
 }
 .main-img {
     display: block;
     width: 100%;
     margin-top: 20px;
-    
+    border: 8px solid white;
+    border-radius: 30px;
 
 }

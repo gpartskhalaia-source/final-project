@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 220" role="img" aria-labelledby="title desc">
+<title id="title">TrailNest adventure logo</title><desc id="desc">White alpine mountains, orange sun, hiking silhouette, lime green trail, and white TrailNest lettering.</desc>
+<defs><clipPath id="sunclip"><circle cx="193" cy="83" r="67"/></clipPath></defs>
+<!-- Sunset -->
+<circle cx="193" cy="83" r="67" fill="#FFAD32"/>
+<!-- Mountain silhouette -->
+<path d="M19 139 L89 64 L115 89 L155 35 L205 91 L225 74 L287 140 L220 108 L199 118 L156 67 L116 112 L90 92 L52 134 L81 117 L96 122 L156 48 L203 104 L227 88 L268 130 L224 114 L199 132 L155 83 L117 128 L87 104 Z" fill="#fff"/>
+<path d="M155 48 L136 77 L151 70 L158 85 L167 70 L179 79 Z" fill="#fff"/>
+<!-- Hiker -->
+<g fill="#102A3A" stroke="#102A3A" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="224" cy="67" r="7" stroke="none"/>
+<path d="M220 76 L209 97 L225 109 L234 91 L227 78 Z" stroke="none"/>
+<path d="M216 88 L202 98 M227 85 L238 95 M220 105 L206 127 M225 107 L239 126" stroke-width="6" fill="none"/>
+<path d="M240 89 L247 131" stroke-width="2.5" fill="none"/>
+<rect x="206" y="81" width="12" height="21" rx="4" stroke="none"/>
+</g>
+<!-- Flowing trail -->
+<path d="M28 160 Q118 118 215 142 Q248 151 290 142" fill="none" stroke="#C8FF8A" stroke-width="7" stroke-linecap="round"/>
+<!-- Brand -->
+<text x="292" y="147" fill="#FFFFFF" font-family="Trebuchet MS, Segoe UI, Arial, sans-serif" font-size="83" font-weight="800" font-style="italic" letter-spacing="-5">TrailNest</text>
+<path d="M312 174 Q441 155 590 172" fill="none" stroke="#C8FF8A" stroke-width="7" stroke-linecap="round"/>
+</svg>
