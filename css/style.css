@@ -58,6 +58,20 @@ header {
     color: #C8FF8A;
 }
 
+.plan-btn {
+    background-color: #C8FF8A;
+    color: #102A3A;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.plan-btn:hover {
+    background-color: white;
+}
 
 /* MAIN */
 
