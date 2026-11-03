@@ -20,11 +20,13 @@
 
 .about-nav li {
     margin: 0;
+    
 }
 
 .about-nav a {
     color: white;
     font-size: 14px;
+    text-decoration: none;
 }
 
 .about-nav a:hover {

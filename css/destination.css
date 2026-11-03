@@ -52,3 +52,114 @@
 .destination-header .plan-btn:hover {
     background-color: white;
 }
+
+
+.main-container {
+    position: relative;
+    max-width: 1400px;
+    width: 100%;
+    margin: 30px auto;
+}
+
+.main-img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 30px;
+    display: block;
+}
+
+.main-container h1 {
+    position: absolute;
+    top: 160px;
+    left: 60px;
+    z-index: 1;
+
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.span-h1 {
+    color: #C8FF8A;
+}
+
+
+/* DESTINATIONS */
+
+.destinations {
+    max-width: 1400px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.destinations h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #102A3A;
+    margin-bottom: 40px;
+}
+
+/* CARDS CONTAINER */
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* CARD */
+
+.travel-card {
+    width: 25%;
+    background-color: #F2F8F4;
+    border-radius: 20px;
+    overflow: hidden;
+    padding-bottom: 25px;
+}
+
+.travel-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.travel-card h3 {
+    font-size: 20px;
+    color: #102A3A;
+    margin: 20px 15px 10px;
+}
+
+.travel-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0 15px 20px;
+}
+
+.travel-card a {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 10px 20px;
+
+    background-color: #C8FF8A;
+    color: #102A3A;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* HOVER */
+
+.travel-card:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* FOOTER */
+
+.about-footer {
+    background-color: #071F2B;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
