@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration | TrailNest</title>
+    <link rel="stylesheet" href="./css/registration.css" />
+    <script src="./registration.js" defer></script>
+  </head>
+
+  <body>
+    <main class="registration">
+      <a class="back-link" href="./index.html">← Back to Home</a>
+
+      <h1>Join TrailNest</h1>
+      <p class="description">Your next adventure starts here.</p>
+
+      <form id="registration-form">
+        <div class="form-group">
+          <label for="name">Full name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            autocomplete="name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            autocomplete="new-password"
+            minlength="8"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirm password</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            autocomplete="new-password"
+            minlength="8"
+            required
+          />
+        </div>
+
+        <button type="submit">Register</button>
+
+        <p id="form-message" role="status"></p>
+      </form>
+    </main>
+    <script src="./js/registration.js"></script>
+  </body>
+</html>
