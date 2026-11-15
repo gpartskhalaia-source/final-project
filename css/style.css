@@ -1,125 +1,136 @@
-
-/* GENERAL STYLES */
-
 * {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 :root {
-    --maincolor: white;
-    --hovercolor:#C8FF8A;
-    --btncolor: #102A3A;
-
-
+  --maincolor: white;
+  --hovercolor: #c8ff8a;
+  --btncolor: #102a3a;
 }
 
-.background {
-    background-image: url("../images/Sunset Mountain Lake Campsite.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
-
-
-/* HEADER */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    padding: 20px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 20px 70px;
+}
+
+.home-header {
+  background-color: var(--btncolor);
 }
 
 .logo-img {
-    width: 190px;
+  display: block;
+  width: 190px;
+  max-width: 100%;
 }
 
-
-/* NAVIGATION */
+.burger-btn {
+  display: none;
+}
 
 .nav-page {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-page ul {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nav-page a {
-    text-decoration: none;
-    color: var(--maincolor);
-    font-size: 16px;
-    font-weight: 500;
-    transition: color 0.3s ease;
+  color: var(--maincolor);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.3s;
 }
 
 .nav-page a:hover {
-    color: var(--hovercolor);
+  color: var(--hovercolor);
 }
 
 .plan-btn {
-    background-color: var(--hovercolor);
-    color: var(--btncolor);
-    padding: 10px 18px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 30px;
+  background-color: var(--hovercolor);
+  color: var(--btncolor);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 .plan-btn:hover {
-    background-color: var(--maincolor);
+  background-color: var(--maincolor);
 }
-
-/* MAIN */
 
 .main {
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.main h1 {
-    position: absolute;
-    top: 220px;
-    left: 70px;
-    margin: 0;
-    color: var(--maincolor);
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 1.2;
-    z-index: 1;
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
 }
 
-.span-h1 {
-    color: var(--hovercolor);
+.hero-img {
+  display: block;
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
 }
 
-.main-img {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border: 8px solid var(--maincolor);
-    border-radius: 30px;
+.hero-title {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  margin: 0;
+  transform: translateY(-50%);
+  color: var(--maincolor);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px #00000055;
 }
 
-/* FOOTER */
+.hero-title span {
+  color: var(--hovercolor);
+}
 
 .about-footer {
-    background-color: #071F2B;
-    color: white;
-    text-align: center;
-    padding: 25px;
+  padding: 25px;
+  background-color: #071f2b;
+  color: white;
+  text-align: center;
+}
+
+.about-footer p {
+  margin: 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #c8ff8a;
+  outline-offset: 4px;
 }

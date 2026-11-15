@@ -1,35 +1,124 @@
-/* MOBILE — 767px-მდე */
-
 @media (max-width: 767px) {
-  header {
-    flex-direction: column;
-    gap: 20px;
+  header,
+  .destination-header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
     padding: 20px;
   }
 
-  .logo-img {
-    width: 150px;
+  .logo-img,
+  .destination-logo {
+    display: block;
+    width: 140px;
   }
 
-  .nav-page {
-    position: static;
+  .burger-btn {
+    display: block;
+    order: -1;
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 0 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: #143e33;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .home-header .burger-btn,
+  .destination-header .burger-btn {
+    color: white;
+  }
+
+  header .plan-btn {
+    box-sizing: border-box;
+    display: block;
+    order: 2;
+    width: 100%;
+    margin: 0;
+    padding: 12px 15px;
+    text-align: center;
+  }
+
+  .nav-page,
+  .destination-header .nav-page {
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 25px;
     transform: none;
+    background-color: #143e33;
+    border-radius: 0 0 12px 12px;
+    z-index: 100;
   }
 
-  .nav-page ul {
+  .home-header .nav-page,
+  .destination-header .nav-page {
+    background-color: #102a3a;
+  }
+
+  .nav-page.open,
+  .destination-header .nav-page.open {
+    display: block;
+  }
+
+  .nav-page ul,
+  .destination-header .nav-page ul {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 
-  .nav-page a {
-    font-size: 12px;
+  .nav-page li {
+    margin: 0;
   }
 
-  .main h1 {
-    margin-top: 100px;
-    margin-left: 20px;
-    font-size: 32px;
+  .nav-page a,
+  .destination-header .nav-page a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .nav-page a:hover,
+  .destination-header .nav-page a:hover {
+    color: #c8ff8a;
+  }
+
+  .main {
+    padding: 15px;
+  }
+
+  .hero {
+    border-radius: 18px;
+  }
+
+  .hero-img {
+    height: 350px;
+  }
+
+  .hero .hero-title {
+    top: 50%;
+    left: 20px;
+    right: 20px;
+    margin: 0;
+    transform: translateY(-50%);
+    font-size: 30px;
   }
 
   .destinations {
@@ -54,6 +143,7 @@
   }
 
   .contact {
+    box-sizing: border-box;
     width: 100%;
     padding: 40px 20px;
   }
@@ -72,25 +162,37 @@
   }
 }
 
-/* TABLET — 768px-დან */
-
 @media (min-width: 768px) {
-  header {
+  header,
+  .destination-header {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 25px;
     padding: 25px;
   }
 
-  .logo-img {
+  .logo-img,
+  .destination-logo {
     width: 170px;
   }
 
-  .nav-page {
+  .burger-btn {
+    display: none;
+  }
+
+  .nav-page,
+  .destination-header .nav-page {
+    display: block;
     position: static;
+    width: auto;
     transform: none;
   }
 
-  .nav-page ul {
+  .nav-page ul,
+  .destination-header .nav-page ul {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
@@ -98,11 +200,19 @@
 
   .nav-page a {
     font-size: 14px;
+    white-space: nowrap;
   }
 
-  .main h1 {
-    margin-top: 150px;
-    margin-left: 40px;
+  .hero-img {
+    height: 450px;
+  }
+
+  .hero .hero-title {
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    margin: 0;
+    transform: translateY(-50%);
     font-size: 48px;
   }
 
@@ -128,6 +238,7 @@
   }
 
   .contact {
+    box-sizing: border-box;
     width: 100%;
     padding: 50px 30px;
   }
@@ -146,17 +257,17 @@
   }
 }
 
-/* DESKTOP — 1200px-დან */
-
 @media (min-width: 1200px) {
-  header {
+  header,
+  .destination-header {
+    position: relative;
     flex-direction: row;
     justify-content: space-between;
-    position: relative;
     padding: 20px 70px;
   }
 
-  .logo-img {
+  .logo-img,
+  .destination-logo {
     width: 190px;
   }
 
@@ -166,14 +277,22 @@
     transform: translateX(-50%);
   }
 
-  .nav-page ul {
+  .destination-header .nav-page {
+    position: static;
+    transform: none;
+  }
+
+  .nav-page ul,
+  .destination-header .nav-page ul {
     flex-wrap: nowrap;
     gap: 40px;
   }
 
-  .main h1 {
-    margin-top: 220px;
-    margin-left: 70px;
+  .hero-img {
+    height: 550px;
+  }
+
+  .hero .hero-title {
     font-size: 64px;
   }
 
@@ -191,91 +310,5 @@
 
   .contact-heading h1 {
     font-size: 48px;
-  }
-}
-
-@media (max-width: 767px) {
-  header {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-  }
-
-  .burger-btn {
-    display: block;
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    color: #143e33;
-    font-size: 30px;
-    cursor: pointer;
-     order: -1;
-    margin-left: 0;
-    margin-right: auto;
-  }
-
-   header .plan-btn {
-    order: 2;
-  }
-
-  .nav-page {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 25px;
-    transform: none;
-    background-color: #143e33;
-    border-radius: 0 0 12px 12px;
-    z-index: 100;
-  }
-
-  .nav-page.open {
-    display: block;
-  }
-
-  .nav-page ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .nav-page a {
-    color: white;
-    font-size: 14px;
-    text-decoration: none;
-  }
-
-  .nav-page a:hover {
-    color: #c8ff8a;
-  }
-
-  .burger-btn:focus-visible {
-    outline: 2px solid #718077;
-    outline-offset: 3px;
-  }
-}
-
-@media (min-width: 768px) {
-  .burger-btn {
-    display: none;
-  }
-
-  .nav-page {
-    display: block;
-  }
-
-  .nav-page ul {
-    flex-direction: row;
   }
 }

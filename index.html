@@ -1,25 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>travel</title>
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/responsive.css">
+
+    <title>TrailNest | Your Next Adventure</title>
+
+    <meta
+      name="description"
+      content="Discover beautiful destinations and plan your next adventure with TrailNest."
+    />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
-  <body class="background">
-    <header>
-      <img
-        class="logo-img"
-        src="./images/trailnest-header-logo.svg"
-        alt="logo"
-      />
-       <button
+
+  <body>
+    <header class="home-header">
+      <a href="./index.html">
+        <img
+          class="logo-img"
+          src="./images/trailnest-header-logo.svg"
+          alt="TrailNest home"
+        />
+      </a>
+
+      <button
         class="burger-btn"
         id="burger-btn"
         type="button"
@@ -29,35 +41,40 @@
       >
         ☰
       </button>
-      <nav class="nav-page" id="navigation">
+
+      <nav class="nav-page" id="navigation" aria-label="Main navigation">
         <ul>
-          <li><a href="./index.html" target="_blank">HOME</a></li>
-          <li><a href="./destinations.html" target="_blank">DESTINATIONS</a></li>
-          <li><a href="./aboutus.html" target="_blank">ABOUT US</a></li>
-          <li><a href="./contacts.html" target="_blank">CONTACTS</a></li>
+          <li><a href="./index.html" aria-current="page">HOME</a></li>
+          <li><a href="./destinations.html">DESTINATIONS</a></li>
+          <li><a href="./aboutus.html">ABOUT US</a></li>
+          <li><a href="./contacts.html">CONTACTS</a></li>
         </ul>
       </nav>
 
-      <button class="plan-btn">Plan Yor Trip</button>
+      <a href="./registration.html" class="plan-btn">
+        Plan Your Trip
+      </a>
     </header>
 
     <main class="main">
-      <h1>
-        Your Next <br />
-        <span class="span-h1">Adventure</span> Awaits
-      </h1>
+      <div class="hero">
+        <img
+          class="hero-img"
+          src="./images/Sunset Mountain Lake Campsite.png"
+          alt="Mountain lake and camping at sunset"
+        />
 
-      <img
-        class="main-img"
-        src="./images/Sunset Mountain Lake Campsite.png"
-        alt="Mountain lake and camping at sunset"
-      />
+        <h1 class="hero-title">
+          Your Next <br />
+          <span>Adventure</span> Awaits
+        </h1>
+      </div>
     </main>
+
     <footer class="about-footer">
-
       <p>© 2026 TrailNest. All rights reserved.</p>
-
     </footer>
+
     <script src="./burger.js"></script>
   </body>
 </html>
