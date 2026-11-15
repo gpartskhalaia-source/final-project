@@ -1,0 +1,143 @@
+/* GENERAL */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #e2e2b4;
+  color: #143e33;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1.25rem 4.375rem;
+}
+
+.logo-img {
+  display: block;
+  width: 11.875rem;
+}
+
+/* NAVIGATION */
+
+.nav-page {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-page ul {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-page a {
+  color: #143e33;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+
+.nav-page a:hover {
+  color: #718077;
+}
+
+.nav-page a[aria-current="page"] {
+  border-bottom: 0.125rem solid #143e33;
+  padding-bottom: 0.3rem;
+}
+
+/* CONTACT */
+
+.contact {
+  max-width: 46rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+/* CONTACT HEADING */
+
+.contact-heading {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-heading h1 {
+  margin: 0 0 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.contact-heading p {
+  margin: 0;
+  color: #718077;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* CONTACT INFORMATION */
+
+.contact-info {
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border: 0.0625rem solid #e0e7d9;
+  border-radius: 0.75rem;
+}
+
+.contact-item {
+  padding: 1.5rem 0;
+}
+
+.contact-item + .contact-item {
+  border-top: 0.0625rem solid #e0e7d9;
+}
+
+.contact-item h2 {
+  margin: 0 0 0.5rem;
+  color: #143e33;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contact-item a,
+.contact-item p {
+  margin: 0;
+  color: #718077;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.contact-item a {
+  transition: color 0.3s;
+}
+
+.contact-item a:hover {
+  color: #143e33;
+}
+
+/* KEYBOARD FOCUS */
+
+a:focus-visible {
+  outline: 0.125rem solid #143e33;
+  outline-offset: 0.25rem;
+}
