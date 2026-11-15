@@ -19,7 +19,17 @@
         src="./images/trailnest-header-logo.svg"
         alt="logo"
       />
-      <nav class="nav-page">
+       <button
+        class="burger-btn"
+        id="burger-btn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="navigation"
+      >
+        ☰
+      </button>
+      <nav class="nav-page" id="navigation">
         <ul>
           <li><a href="./index.html" target="_blank">HOME</a></li>
           <li><a href="./destinations.html" target="_blank">DESTINATIONS</a></li>
@@ -48,5 +58,6 @@
       <p>© 2026 TrailNest. All rights reserved.</p>
 
     </footer>
+    <script src="./burger.js"></script>
   </body>
 </html>
