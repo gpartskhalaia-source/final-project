@@ -1,182 +1,303 @@
+* {
+  box-sizing: border-box;
+}
 
-/* ABOUT US HEADER */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
 
 .about-header {
-    background-color: #102A3A;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 40px;
+  background-color: #102a3a;
 }
 
 .about-logo {
-    width: 180px;
+  display: block;
+  width: 180px;
+}
+
+.menu-btn {
+  display: none;
 }
 
 .about-nav ul {
-    display: flex;
-    gap: 35px;
-}
-
-.about-nav li {
-    margin: 0;
-    
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .about-nav a {
-    color: white;
-    font-size: 14px;
-    text-decoration: none;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .about-nav a:hover {
-    color: #C8FF8A;
+  color: #c8ff8a;
 }
 
-.about-header .plan-btn {
-    background-color: #C8FF8A;
-    color: #102A3A;
-    padding: 12px 25px;
-    border-radius: 30px;
+.plan-btn,
+.explore-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 30px;
+  background-color: #c8ff8a;
+  color: #102a3a;
+  text-align: center;
+  text-decoration: none;
 }
 
-/* ABOUT INTRO */
+.plan-btn:hover,
+.explore-btn:hover {
+  background-color: white;
+}
 
 .about-intro {
-    background-color: #F2F8F4;
-    text-align: center;
-    padding: 100px 20px;
+  padding: 70px 20px;
+  background-color: #f2f8f4;
+  text-align: center;
 }
 
 .about-intro h1 {
-    font-size: 50px;
-    color: #102A3A;
-    margin-bottom: 20px;
+  margin: 0 0 20px;
+  color: #102a3a;
 }
 
-.about-intro p {
-    font-size: 18px;
-    color: #555;
+.about-intro p,
+.story-text p {
+  color: #555;
+  line-height: 1.8;
 }
-
-/* OUR STORY */
 
 .our-story {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 30px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 25px;
 }
 
-.story-text {
-    width: 50%;
+.story-text,
+.story-image {
+  flex: 1;
+  min-width: 0;
 }
 
 .story-text h2 {
-    font-size: 36px;
-    color: #102A3A;
-    margin-bottom: 20px;
-}
-
-.story-text p {
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-.story-image {
-    width: 50%;
+  margin: 0 0 20px;
+  color: #102a3a;
 }
 
 .story-image img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 20px;
+  display: block;
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+  object-fit: cover;
 }
 
-/* OUR VALUES */
-
 .our-values {
-    background-color: #F2F8F4;
-    padding: 80px 30px;
-    text-align: center;
+  padding: 60px 25px;
+  background-color: #f2f8f4;
+  text-align: center;
 }
 
 .our-values h2 {
-    font-size: 36px;
-    color: #102A3A;
-    margin-bottom: 40px;
+  margin: 0 0 30px;
+  color: #102a3a;
 }
 
 .values-container {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
+  display: grid;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .value-card {
-    background-color: white;
-    width: 300px;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: left;
-}
-
-.value-card h3 {
-    font-size: 24px;
-    color: #102A3A;
-    margin-bottom: 15px;
-}
-
-.value-card p {
-    color: #666;
-    line-height: 1.7;
+  min-width: 0;
+  padding: 25px;
+  border-radius: 15px;
+  background-color: white;
+  text-align: left;
+  transition: background-color 0.3s;
 }
 
 .value-card:hover {
-    background-color: #C8FF8A;
+  background-color: #c8ff8a;
 }
 
-/* CALL TO ACTION */
+.value-card h3 {
+  margin: 0 0 15px;
+  color: #102a3a;
+  font-size: 24px;
+}
+
+.value-card p {
+  margin: 0;
+  color: #555;
+  line-height: 1.7;
+}
 
 .about-cta {
-    background-color: #102A3A;
-    text-align: center;
-    padding: 80px 20px;
+  padding: 60px 20px;
+  background-color: #102a3a;
+  color: white;
+  text-align: center;
 }
 
 .about-cta h2 {
-    font-size: 36px;
-    color: white;
-    margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 
 .about-cta p {
-    color: white;
-    margin-bottom: 30px;
+  margin-bottom: 30px;
+  line-height: 1.8;
 }
-
-.about-cta .explore-btn {
-    display: inline-block;
-    background-color: #C8FF8A;
-    color: #102A3A;
-    padding: 15px 30px;
-    border-radius: 30px;
-}
-
-.about-cta .explore-btn:hover {
-    background-color: white;
-}
-
-/* FOOTER */
 
 .about-footer {
-    background-color: #071F2B;
-    color: white;
-    text-align: center;
-    padding: 25px;
+  padding: 25px;
+  background-color: #071f2b;
+  color: white;
+  text-align: center;
 }
 
+.about-footer p {
+  margin: 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #8bad70;
+  outline-offset: 4px;
+}
+
+@media (max-width: 767px) {
+  .about-header {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .about-logo {
+    width: 140px;
+  }
+
+  .menu-btn {
+    display: block;
+    order: -1;
+    width: 44px;
+    height: 44px;
+    margin-right: auto;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .about-header .plan-btn {
+    width: 100%;
+    order: 2;
+  }
+
+  .about-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    background-color: #102a3a;
+    z-index: 100;
+  }
+
+  .about-nav.open {
+    display: block;
+  }
+
+  .about-nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-intro {
+    padding: 40px 20px;
+  }
+
+  .about-intro h1 {
+    font-size: 32px;
+  }
+
+  .our-story {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .story-text,
+  .story-image {
+    width: 100%;
+  }
+
+  .story-image img {
+    height: 250px;
+  }
+
+  .story-text h2,
+  .our-values h2,
+  .about-cta h2 {
+    font-size: 28px;
+  }
+
+  .values-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-header {
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .about-intro h1 {
+    font-size: 44px;
+  }
+
+  .story-text h2,
+  .our-values h2,
+  .about-cta h2 {
+    font-size: 32px;
+  }
+
+  .values-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-header {
+    flex-direction: row;
+    padding: 20px 40px;
+  }
+
+  .about-intro h1 {
+    font-size: 50px;
+  }
+
+  .values-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

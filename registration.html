@@ -1,11 +1,24 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Registration | TrailNest</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
     <link rel="stylesheet" href="./css/registration.css" />
-    <script src="./registration.js" defer></script>
   </head>
 
   <body>
@@ -15,16 +28,18 @@
       <h1>Join TrailNest</h1>
       <p class="description">Your next adventure starts here.</p>
 
-      <form id="registration-form">
+      <form id="registration" novalidate>
         <div class="form-group">
-          <label for="name">Full name</label>
+          <label for="username">Username</label>
           <input
             type="text"
-            id="name"
-            name="name"
-            autocomplete="name"
+            id="username"
+            name="username"
+            autocomplete="username"
+            aria-describedby="error-username"
             required
           />
+          <p class="errorText" id="error-username"></p>
         </div>
 
         <div class="form-group">
@@ -34,39 +49,78 @@
             id="email"
             name="email"
             autocomplete="email"
+            aria-describedby="error-email"
             required
           />
+          <p class="errorText" id="error-email"></p>
         </div>
 
         <div class="form-group">
           <label for="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            autocomplete="new-password"
-            minlength="8"
-            required
-          />
+
+          <div class="password-field">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              autocomplete="new-password"
+              aria-describedby="error-password"
+              required
+            />
+
+            <button
+              type="button"
+              id="togglePassword"
+              class="password-toggle"
+              aria-label="Show password"
+              aria-pressed="false"
+              aria-controls="password"
+            >
+              <i
+                class="fa-solid fa-eye"
+                id="toggleIcon"
+                aria-hidden="true"
+              ></i>
+            </button>
+          </div>
+
+          <p class="errorText" id="error-password"></p>
         </div>
 
         <div class="form-group">
-          <label for="confirm-password">Confirm password</label>
+          <label for="password2">Confirm password</label>
           <input
             type="password"
-            id="confirm-password"
-            name="confirm-password"
+            id="password2"
+            name="password2"
             autocomplete="new-password"
-            minlength="8"
+            aria-describedby="error-password2"
             required
           />
+          <p class="errorText" id="error-password2"></p>
         </div>
 
-        <button type="submit">Register</button>
+        <div class="agree-group">
+          <label for="checkagree">
+            <input
+              type="checkbox"
+              id="checkagree"
+              name="agree"
+              aria-describedby="error-agree"
+              required
+            />
+            I understand this is a demo registration.
+          </label>
+
+          <p class="errorText" id="error-agree"></p>
+        </div>
+
+        <button class="register-btn" type="submit">Register</button>
 
         <p id="form-message" role="status"></p>
       </form>
     </main>
+
     <script src="./js/registration.js"></script>
   </body>
 </html>

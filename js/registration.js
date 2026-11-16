@@ -1,28 +1,129 @@
-const form = document.getElementById("registration-form");
-const fullName = document.getElementById("name");
-const password = document.getElementById("password");
-const confirmPassword = document.getElementById("confirm-password");
+// const form = document.getElementById("registration-form");
+// const fullName = document.getElementById("name");
+// const password = document.getElementById("password");
+// const confirmPassword = document.getElementById("confirm-password");
+// const message = document.getElementById("form-message");
+
+// form.addEventListener("submit", function (event) {
+//   event.preventDefault();
+
+//   if (fullName.value.trim() === "") {
+//     message.textContent = "Please enter your name.";
+//     message.className = "error";
+//     fullName.focus();
+//     return;
+//   }
+
+//   if (password.value !== confirmPassword.value) {
+//     message.textContent = "Passwords do not match.";
+//     message.className = "error";
+//     confirmPassword.focus();
+//     return;
+//   }
+
+//   message.textContent = "Form completed successfully!";
+//   message.className = "success";
+
+//   form.reset();
+// });
+
+const passwordshow = document.getElementById("password");
+const toggleIconEye = document.getElementById("toggleIcon");
+const togglePassword = document.getElementById("togglePassword");
+const registration = document.getElementById("registration");
 const message = document.getElementById("form-message");
 
-form.addEventListener("submit", function (event) {
+function showHidePassword() {
+  if (passwordshow.type === "password") {
+    passwordshow.type = "text";
+    toggleIconEye.classList.remove("fa-eye");
+    toggleIconEye.classList.add("fa-eye-slash");
+    togglePassword.setAttribute("aria-label", "Hide password");
+    togglePassword.setAttribute("aria-pressed", "true");
+  } else {
+    passwordshow.type = "password";
+    toggleIconEye.classList.remove("fa-eye-slash");
+    toggleIconEye.classList.add("fa-eye");
+    togglePassword.setAttribute("aria-label", "Show password");
+    togglePassword.setAttribute("aria-pressed", "false");
+  }
+}
+
+togglePassword.addEventListener("click", showHidePassword);
+
+registration.addEventListener("submit", function (event) {
   event.preventDefault();
+  message.textContent = "";
 
-  if (fullName.value.trim() === "") {
-    message.textContent = "Please enter your name.";
-    message.className = "error";
-    fullName.focus();
-    return;
+  const errors = {};
+
+  const username = document.getElementById("username").value.trim();
+  const emailInput = document.getElementById("email");
+  const email = emailInput.value.trim();
+  const password = passwordshow.value;
+  const password2 = document.getElementById("password2").value;
+  const agree = document.getElementById("checkagree").checked;
+
+  if (username === "") {
+    errors.username = "Username can't be empty";
+  } else if (username.length < 4) {
+    errors.username = "Username must contain at least 4 characters";
   }
 
-  if (password.value !== confirmPassword.value) {
-    message.textContent = "Passwords do not match.";
-    message.className = "error";
-    confirmPassword.focus();
-    return;
+  if (email === "") {
+    errors.email = "Email can't be empty";
+  } else if (emailInput.validity.typeMismatch) {
+    errors.email = "Please enter a valid email address";
   }
 
-  message.textContent = "Form completed successfully!";
-  message.className = "success";
+  if (password === "") {
+    errors.password = "Password can't be empty";
+  } else if (password.length < 8) {
+    errors.password = "Password must contain at least 8 characters";
+  }
 
-  form.reset();
+  if (password2 === "") {
+    errors.password2 = "Please repeat your password";
+  } else if (password !== password2) {
+    errors.password2 = "Passwords do not match";
+  }
+
+  if (!agree) {
+    errors.agree = "Please confirm that this is a demo registration";
+  }
+
+  const fields = ["username", "email", "password", "password2"];
+
+  fields.forEach(function (field) {
+    const input = document.getElementById(field);
+
+    document.getElementById("error-" + field).textContent =
+      errors[field] || "";
+
+    input.classList.toggle("error", Boolean(errors[field]));
+    input.setAttribute("aria-invalid", String(Boolean(errors[field])));
+  });
+
+  document.getElementById("error-agree").textContent =
+    errors.agree || "";
+
+  document.getElementById("checkagree").setAttribute(
+    "aria-invalid",
+    String(Boolean(errors.agree))
+  );
+
+  if (Object.keys(errors).length === 0) {
+    registration.reset();
+
+    passwordshow.type = "password";
+    toggleIconEye.classList.remove("fa-eye-slash");
+    toggleIconEye.classList.add("fa-eye");
+    togglePassword.setAttribute("aria-label", "Show password");
+    togglePassword.setAttribute("aria-pressed", "false");
+
+    message.textContent =
+      "Demo registration completed! No account was created.";
+  } else {
+    registration.querySelector('[aria-invalid="true"]').focus();
+  }
 });
