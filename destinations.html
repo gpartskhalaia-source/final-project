@@ -1,181 +1,139 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>destinations</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/destination.css">
-    
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-</head>
-<body>
-    
-<header class="destination-header">
-  <a href="./index.html">
-    <img
-      class="destination-logo"
-      src="./images/trailnest-header-logo.svg"
-      alt="TrailNest home"
-    />
-  </a>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations | TrailNest</title>
 
-  <button class="menu-btn" id="menuBtn" aria-label="Open menu">
-        <i class="fa-solid fa-bars"></i>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/destination.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="destination-header">
+
+    <a href="./index.html">
+      <img class="destination-logo" src="./images/trailnest-header-logo.svg" alt="TrailNest home">
+    </a>
+
+    <nav class="destination-nav nav-page" id="navigation">
+      <ul>
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="./destinations.html" aria-current="page">DESTINATIONS</a></li>
+        <li><a href="./aboutus.html">ABOUT US</a></li>
+        <li><a href="./contacts.html">CONTACTS</a></li>
+      </ul>
+    </nav>
+
+    <a href="./registration.html" class="plan-btn">Registration</a>
+
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="navigation" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </header>
+
+  <main>
+
+    <!-- SLIDER -->
+    <section class="slider" aria-label="Travel destinations">
+
+      <img class="slide active" src="./images/Mountain landscape.jpeg" alt="Mountain landscape" fetchpriority="high">
+      <img class="slide" src="./images/Beautiful beach.jpeg" alt="Beautiful beach" decoding="async" hidden>
+      <img class="slide" src="./images/Green forest.jpeg" alt="Green forest" decoding="async" hidden>
+
+      <button class="slider-btn prev-btn" type="button" aria-label="Previous slide">
+        <i class="fa-solid fa-chevron-left"></i>
       </button>
 
-  <nav class="destination-nav nav-page" id="navigation">
-    <ul>
-      <li><a href="./index.html">HOME</a></li>
-      <li>
-        <a href="./destinations.html" aria-current="page">
-          DESTINATIONS
-        </a>
-      </li>
-      <li><a href="./aboutus.html">ABOUT US</a></li>
-      <li><a href="./contacts.html">CONTACTS</a></li>
-    </ul>
-  </nav>
+      <button class="slider-btn next-btn" type="button" aria-label="Next slide">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
 
-  <a href="./registration.html" class="plan-btn">
-    Registration
-  </a>
-</header>
-<main>
+      <p class="slide-counter">1 / 3</p>
 
+    </section>
 
-    <div class="main-container">
+    <!-- DESTINATIONS -->
+    <section class="destinations">
 
-        <h1>
-            Your Next <br>
-            <span class="span-h1">Adventure</span> Awaits
-        </h1>
+      <h2>Choose Your Adventure</h2>
 
-        <img
-            class="main-img"
-            src="./images/Hiker Overlooking Turquoise Alpine Valley.png"
-            alt="Beautiful mountain landscape"
-        />
+      <div class="cards-container">
 
-    </div>
+        <!-- MOUNTAIN CARD -->
+        <article class="travel-card">
+          <img src="./images/Mountain landscape.jpeg" alt="Mountain hiking adventure" loading="lazy" decoding="async">
 
+          <h3>Mountain Adventures</h3>
+          <p>Explore beautiful mountains, hiking trails and amazing views.</p>
 
-        
+          <div class="tour-purchase">
+            <p class="tour-price">$290 <span>/ person</span></p>
+            <a class="buy-btn" href="./booking.html?tour=290">Book Now</a>
+          </div>
+        </article>
 
-    
-<section class="destinations">
-  <h2>Choose Your Adventure</h2>
+        <!-- BEACH CARD -->
+        <article class="travel-card">
+          <img src="./images/Beautiful beach.jpeg" alt="Beautiful tropical beach" loading="lazy" decoding="async">
 
-  <div class="cards-container">
-    <article class="travel-card">
-      <img
-        src="./images/nzlpli0xEA4msFCw_se5bSHarNhXIFnYAGpVU5386GxIAI3qMP7-aPH1F_wyULF8PshgMMLZ19GXUOdwYskb30-brI7G-Ezss5pjnpuW4pF5RQZDUYKHBKfiRARSkG3t-pLTj2WZuUH3kMAtKZOXiSE7Sl4ByTRV51v_aAYI0BnWKmyJcSemGrPHIVfWbCjY.jpeg"
-        alt="Mountains"
-      />
+          <h3>Beach Escapes</h3>
+          <p>Relax on beautiful beaches and enjoy crystal-clear water.</p>
 
-      <h3>Mountain Adventures</h3>
+          <div class="tour-purchase">
+            <p class="tour-price">$350 <span>/ person</span></p>
+            <a class="buy-btn" href="./booking.html?tour=350">Book Now</a>
+          </div>
+        </article>
 
-      <p>
-        Explore beautiful mountains,
-        hiking trails and amazing views.
-      </p>
+        <!-- NATURE CARD -->
+        <article class="travel-card">
+          <img src="./images/Green forest.jpeg" alt="Beautiful green forest" loading="lazy" decoding="async">
 
-      
+          <h3>Nature and Wildlife</h3>
+          <p>Discover green forests, waterfalls and wild animals.</p>
 
-      <div class="tour-purchase">
-        <p class="tour-price">$290 <span>/ person</span></p>
+          <div class="tour-purchase">
+            <p class="tour-price">$210 <span>/ person</span></p>
+            <a class="buy-btn" href="./booking.html?tour=210">Book Now</a>
+          </div>
+        </article>
 
-        <a class="buy-btn" href="./booking.html?tour=mountain">
-          Book Now
-        </a>
+        <!-- CITY CARD -->
+        <article class="travel-card">
+          <img src="./images/city.jpeg">
+
+          <h3>City Breaks</h3>
+          <p>Visit exciting cities, discover cultures and landmarks.</p>
+
+          <div class="tour-purchase">
+            <p class="tour-price">$180 <span>/ person</span></p>
+            <a class="buy-btn" href="./booking.html?tour=180">Book Now</a>
+          </div>
+        </article>
+
       </div>
-    </article>
+    </section>
 
-    <article class="travel-card">
-      <img
-        src="./images/2nGkviV_r26cxFwYw5bcLmIpRZ2iw8onhwuAEj9y8KdCZWExnu23H41iRSuJPznmx-QmfEpYWIW2IqaX1ilJd0W1eKvIVUdIMakmt1KisAAs3Xaq7oJywQgN9puD4rKfVvYI_O3Nr8RYgnhVT1tlSnQpDYmkO06WwOCtiTm4nyTGsVSLMThKN2V3Q.jpeg"
-        alt="Beach"
-      />
+  </main>
 
-      <h3>Beach Escapes</h3>
+  <!-- FOOTER -->
+  <footer class="about-footer">
+    <p>© 2026 TrailNest. All rights reserved.</p>
+  </footer>
 
-      <p>
-        Relax on beautiful beaches
-        and enjoy crystal-clear water.
-      </p>
+  <!-- JAVASCRIPT -->
+  <script src="./js/burger.js"></script>
+  <script src="./js/slider.js"></script>
 
-      
-
-      <div class="tour-purchase">
-        <p class="tour-price">$350 <span>/ person</span></p>
-
-        <a class="buy-btn" href="./booking.html?tour=beach">
-          Book Now
-        </a>
-      </div>
-    </article>
-
-    <article class="travel-card">
-      <img
-        src="./images/uPtJhnj89V2yKw1HZ-n7LP7ikRP5sh38V2Q6ZdXCrnrIF84sEnx9DVB4Z1qGKfbf_gXGJvnPnnXY0tlgCSflGXa_lsC9tHwbc9YzqrhZgrgp4IAmeHChdN2TVu_ElbH6h1aznmku5pBZlZhmhTprmuT2NE6PY33nEuwUFWuJ_yeKdKx40m7af-LCy.jpeg"
-        alt="Forest"
-      />
-
-      <h3>Nature and Wildlife</h3>
-
-      <p>
-        Discover green forests,
-        waterfalls and wild animals.
-      </p>
-
-      
-
-      <div class="tour-purchase">
-        <p class="tour-price">$210 <span>/ person</span></p>
-
-        <a class="buy-btn" href="./booking.html?tour=nature">
-          Book Now
-        </a>
-      </div>
-    </article>
-
-    <article class="travel-card">
-      <img
-        src="./images/aQWGU9uRdMKo_TSEzUhobMvVwJyF1Xnv5b0adXqDgZOZw3DHwKQDO9GKKUw2YgXjs1v8atP8S8OEf6U_7Ute-se5Pcm2kra_uunNWdVTxezjf7oVp_YnoGpmOQg1_CTDfka2VjCKrkZx2fvF9m8Q5VLYlrubub_tmgR9sm6LJlaZFpEARzbj9Z80D.jpeg"
-        alt="City"
-      />
-
-      <h3>City Breaks</h3>
-
-      <p>
-        Visit exciting cities,
-        discover cultures and landmarks.
-      </p>
-
-      
-
-      <div class="tour-purchase">
-        <p class="tour-price">$180 <span>/ person</span></p>
-
-        <a class="buy-btn" href="./booking.html?tour=city">
-          Book Now
-        </a>
-      </div>
-    </article>
-  </div>
-</section>
-
-    
-</main>
-<footer class="about-footer">
-
-      <p>© 2026 TrailNest. All rights reserved.</p>
-
-    </footer>
-
-    <script src="./js/burger.js"></script>
 </body>
 </html>
+
