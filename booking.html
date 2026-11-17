@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Trip | TrailNest</title>
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/booking.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="booking-header">
+    <a href="./index.html">
+      <img src="./images/trailnest-header-logo.svg" alt="TrailNest home">
+    </a>
+    <a href="./destinations.html">Back to Destinations</a>
+  </header>
+
+  <main class="booking-container">
+    <h1>Book Your Adventure</h1>
+    <p>Choose your destination and calculate your trip price.</p>
+
+    <form id="calculator-form">
+
+      <label for="tour">Choose Your Tour</label>
+      <select id="tour" required>
+        <option value="">Select a tour</option>
+        <option value="290">Mountain Adventures — $290</option>
+        <option value="350">Beach Escapes — $350</option>
+        <option value="210">Nature and Wildlife — $210</option>
+        <option value="180">City Breaks — $180</option>
+      </select>
+
+      <label for="people">Number of Travelers</label>
+      <input type="number" id="people" min="1" value="1" required>
+
+      <button type="submit">Calculate Price</button>
+
+      <div class="total-box" aria-live="polite">
+        <h2>Total Price</h2>
+        <p id="total-price">$0</p>
+      </div>
+
+    </form>
+  </main>
+
+  <footer class="booking-footer">
+    <p>© 2026 TrailNest. All rights reserved.</p>
+  </footer>
+
+  <script src="./js/booking.js"></script>
+
+</body>
+</html>
