@@ -7,9 +7,11 @@ menuBtn.addEventListener("click", function () {
   if (navigation.classList.contains("open")) {
     menuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
     menuBtn.setAttribute("aria-label", "Close menu");
+    menuBtn.setAttribute("aria-expanded", "true");
   } else {
     menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
     menuBtn.setAttribute("aria-label", "Open menu");
+    menuBtn.setAttribute("aria-expanded", "false");
   }
 });
 
@@ -18,7 +20,9 @@ const navLinks = document.querySelectorAll(".nav-page a");
 navLinks.forEach(function (link) {
   link.addEventListener("click", function () {
     navigation.classList.remove("open");
+
     menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
     menuBtn.setAttribute("aria-label", "Open menu");
+    menuBtn.setAttribute("aria-expanded", "false");
   });
 });

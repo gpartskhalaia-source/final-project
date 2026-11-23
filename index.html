@@ -2,27 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Travel Web Page" />
-    <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <meta name="author" content="Gvantsa Partskhalaia" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>TrailNest | Your Next Adventure</title>
 
+    <!-- SEO -->
     <meta
       name="description"
       content="Discover beautiful destinations and plan your next adventure with TrailNest."
     />
+    <meta name="author" content="Gvantsa Partskhalaia" />
 
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TrailNest | Your Next Adventure" />
+    <meta
+      property="og:description"
+      content="Discover beautiful destinations and plan your next adventure with TrailNest."
+    />
+    <meta
+      property="og:image"
+      content="https://gpartskhalaia-source.github.io/final-project/images/hero.webp"
+    />
+    <meta
+      property="og:url"
+      content="https://gpartskhalaia-source.github.io/final-project/"
+    />
+
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -37,19 +55,35 @@
         />
       </a>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
-        <i class="fa-solid fa-bars"></i>
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="navigation"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
       </button>
+
       <nav class="nav-page" id="navigation" aria-label="Main navigation">
         <ul>
-          <li><a href="./index.html" aria-current="page">HOME</a></li>
-          <li><a href="./destinations.html">DESTINATIONS</a></li>
-          <li><a href="./aboutus.html">ABOUT US</a></li>
-          <li><a href="./contacts.html">CONTACTS</a></li>
+          <li>
+            <a href="./index.html" aria-current="page">HOME</a>
+          </li>
+          <li>
+            <a href="./destinations.html">DESTINATIONS</a>
+          </li>
+          <li>
+            <a href="./aboutus.html">ABOUT US</a>
+          </li>
+          <li>
+            <a href="./contacts.html">CONTACTS</a>
+          </li>
         </ul>
       </nav>
 
-      <a href="./registration.html" class="plan-btn">Registration</a>
+      <a href="./registration.html" class="plan-btn"> Registration </a>
     </header>
 
     <main class="main">
@@ -58,6 +92,7 @@
           class="hero-img"
           src="./images/hero.webp"
           alt="Mountain lake campsite"
+          fetchpriority="high"
         />
 
         <h1 class="hero-title">
