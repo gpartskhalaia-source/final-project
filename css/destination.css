@@ -1,8 +1,16 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.5.15,
+* Autoprefixer: v10.5.0
+* Browsers: last 4 version
+*/
+
 
 /* GENERAL STYLES */
 
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
@@ -14,9 +22,15 @@ body {
 
 .destination-header {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 0.5rem;
     padding: 1rem;
     background-color: #102a3a;
@@ -45,9 +59,16 @@ body {
 }
 
 .destination-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 1.25rem;
     margin: 0;
     padding: 0;
@@ -110,7 +131,8 @@ body {
     display: block;
     width: 100%;
     height: 17.5rem;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .slide[hidden] {
@@ -120,7 +142,9 @@ body {
 .slider-btn {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     width: 2.25rem;
     height: 2.25rem;
     padding: 0;
@@ -149,7 +173,9 @@ body {
     position: absolute;
     bottom: 1rem;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     margin: 0;
     padding: 0.5rem 1rem;
     border-radius: 1.25rem;
@@ -176,7 +202,9 @@ body {
 /* CARDS CONTAINER */
 
 .cards-container {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 1.25rem;
 }
@@ -184,24 +212,35 @@ body {
 /* TRAVEL CARDS */
 
 .travel-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     min-width: 0;
     overflow: hidden;
     border-radius: 0.9375rem;
     background-color: #f2f8f4;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .travel-card:hover {
-    transform: translateY(-0.3125rem);
+    -webkit-transform: translateY(-0.3125rem);
+        -ms-transform: translateY(-0.3125rem);
+            transform: translateY(-0.3125rem);
 }
 
 .travel-card img {
     display: block;
     width: 100%;
     height: 13.75rem;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .travel-card h3 {
@@ -220,10 +259,17 @@ body {
 /* TOUR PURCHASE */
 
 .tour-purchase {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 0.75rem;
     margin: auto 0.9375rem 1.25rem;
     padding-top: 0.9375rem;
@@ -286,8 +332,11 @@ button:focus-visible {
     /* HEADER */
 
     .destination-header {
-        flex-wrap: wrap;
-        justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         gap: 1.5rem;
         padding: 1.5rem;
     }
@@ -311,7 +360,10 @@ button:focus-visible {
     }
 
     .destination-nav ul {
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         gap: 1.25rem;
     }
 
@@ -350,6 +402,7 @@ button:focus-visible {
     }
 
     .cards-container {
+        -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -361,8 +414,11 @@ button:focus-visible {
     /* HEADER */
 
     .destination-header {
-        justify-content: space-between;
-        flex-wrap: nowrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
         padding: 1.25rem 2.5rem;
     }
 
@@ -389,6 +445,7 @@ button:focus-visible {
     /* DESTINATIONS */
 
     .cards-container {
+        -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     }
 }
