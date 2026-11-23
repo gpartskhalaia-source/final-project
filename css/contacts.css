@@ -190,11 +190,6 @@ header {
   overflow-wrap: anywhere;
 }
 
-.review-card .review-stars {
-  color: #e5a52d;
-  font-size: 20px;
-}
-
 /* REVIEW BUTTONS */
 
 .reviews-buttons {
@@ -217,8 +212,13 @@ header {
   transition: background-color 0.3s;
 }
 
-.reviews-buttons button:hover {
+.reviews-buttons button:hover:not(:disabled) {
   background-color: #285d4e;
+}
+
+.reviews-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 #page-number {
@@ -246,6 +246,15 @@ a:focus-visible,
 button:focus-visible {
   outline: 2px solid #143e33;
   outline-offset: 4px;
+}
+
+/* FOOTER */
+
+.about-footer {
+  background-color: #102a3a;
+  color: white;
+  text-align: center;
+  padding: 25px;
 }
 
 /* MOBILE */
