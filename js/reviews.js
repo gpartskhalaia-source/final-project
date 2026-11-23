@@ -1,105 +1,93 @@
-
- // REVIEWS
-
+// Review
 let currentPage = 1;
 let totalPagesAp = 2;
 
 const reviews = [
-  "Amazing experience! Beautiful places and wonderful memories.",
-  "Everything was well organized. I really enjoyed the trip!",
-  "One of the best adventures I've ever had!",
-  "Beautiful destinations and an unforgettable experience.",
-  "I loved every moment of the trip!",
-  "Fantastic experience! I would definitely recommend it."
+    "Amazing experience! Beautiful places and wonderful memories.",
+    "Everything was well organized. I really enjoyed the trip!",
+    "One of the best adventures I've ever had!",
+    "Beautiful destinations and an unforgettable experience.",
+    "I loved every moment of the trip!",
+    "Fantastic experience! I would definitely recommend it."
 ];
 
 function getUsers(page) {
-  document.getElementById("reviews-message").textContent =
-    "Loading reviews...";
-
-  fetch("https://randomuser.me/api/?results=6&seed=trailnest")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Server error");
-      }
-
-      return response.json();
-    })
-    .then(responseData => {
-      render(responseData, page);
-
-      currentPage = page;
-
-      document.getElementById("reviews-message").textContent = "";
-    })
-    .catch(error => {
-      errorRender();
-      console.log(error);
-    });
+    fetch('https://randomuser.me/api/?results=3&seed=trailnest&page=' + page)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Server error');
+            }
+            return response.json();
+        })
+        .then(responseData => {
+            render(responseData);
+        })
+        .catch(error => {
+            errorRender();
+            console.log(error);
+        });
 }
 
-function render(responseData, page) {
-  let fragment = document.createDocumentFragment();
+function render(responseData) {
+    let fragment = document.createDocumentFragment();
 
-  let start = (page - 1) * 3;
+    responseData.results.forEach((item, index) => {
+        let card = document.createElement('article');
+        card.classList.add('review-card');
 
-  let users = responseData.results.slice(start, start + 3);
+        let imgUser = document.createElement('img');
+        imgUser.src = item.picture.large;
+        imgUser.alt = item.name.first + ' ' + item.name.last;
+        imgUser.classList.add('review-avatar');
 
-  users.forEach((item, index) => {
-    let card = document.createElement("article");
-    card.classList.add("review-card");
+        let name = document.createElement('h3');
+        name.textContent = item.name.first + ' ' + item.name.last;
 
-    let imgUser = document.createElement("img");
-    imgUser.src = item.picture.large;
-    imgUser.alt = item.name.first + " " + item.name.last;
-    imgUser.classList.add("review-avatar");
+        let stars = document.createElement('p');
+        stars.textContent = '★★★★★';
+        stars.classList.add('review-stars');
 
-    let name = document.createElement("h3");
-    name.textContent = item.name.first + " " + item.name.last;
+        let comment = document.createElement('p');
+        comment.textContent = reviews[(currentPage - 1) * 3 + index];
 
-    let stars = document.createElement("p");
-    stars.textContent = "★★★★★";
-    stars.classList.add("review-stars");
+        card.appendChild(imgUser);
+        card.appendChild(name);
+        card.appendChild(stars);
+        card.appendChild(comment);
 
-    let comment = document.createElement("p");
-    comment.textContent = reviews[start + index];
+        fragment.appendChild(card);
+    });
 
-    card.appendChild(imgUser);
-    card.appendChild(name);
-    card.appendChild(stars);
-    card.appendChild(comment);
+    document.getElementById('reviews-list').innerHTML = '';
+    document.getElementById('reviews-list').appendChild(fragment);
 
-    fragment.appendChild(card);
-  });
-
-  document.getElementById("reviews-list").innerHTML = "";
-  document.getElementById("reviews-list").appendChild(fragment);
-
-  document.getElementById("page-number").textContent =
-    page + " / " + totalPagesAp;
+    document.getElementById('page-number').textContent =
+        currentPage + ' / ' + totalPagesAp;
 }
 
 function errorRender() {
-  document.getElementById("reviews-message").textContent =
-    "Server error. Please try again.";
+    let p = document.createElement('p');
+    p.textContent = 'Server error';
+
+    document.getElementById('reviews-message').appendChild(p);
 }
 
-document.getElementById("loadPrev").addEventListener("click", function () {
-  if (currentPage == 1) {
-    return;
-  }
+document.getElementById('loadPrev').addEventListener('click', function () {
+    if (currentPage == 1) {
+        return;
+    }
 
-  getUsers(currentPage - 1);
+    currentPage -= 1;
+    getUsers(currentPage);
 });
 
-document.getElementById("loadNext").addEventListener("click", function () {
-  if (currentPage == totalPagesAp) {
-    return;
-  }
+document.getElementById('loadNext').addEventListener('click', function () {
+    if (currentPage == totalPagesAp) {
+        return;
+    }
 
-  getUsers(currentPage + 1);
+    currentPage += 1;
+    getUsers(currentPage);
 });
 
 getUsers(currentPage);
-
-
