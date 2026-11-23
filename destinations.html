@@ -1,139 +1,188 @@
-
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Destinations | TrailNest</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Travel Web Page" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Gvantsa Partskhalaia" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destinations | TrailNest</title>
 
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/destination.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/destination.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
+    <!-- HEADER -->
+    <header class="destination-header">
+      <a href="./index.html">
+        <img
+          class="destination-logo"
+          src="./images/trailnest-header-logo.svg"
+          alt="TrailNest home"
+        />
+      </a>
 
-  <!-- HEADER -->
-  <header class="destination-header">
+      <nav class="destination-nav nav-page" id="navigation">
+        <ul>
+          <li><a href="./index.html">HOME</a></li>
+          <li>
+            <a href="./destinations.html" aria-current="page">DESTINATIONS</a>
+          </li>
+          <li><a href="./aboutus.html">ABOUT US</a></li>
+          <li><a href="./contacts.html">CONTACTS</a></li>
+        </ul>
+      </nav>
 
-    <a href="./index.html">
-      <img class="destination-logo" src="./images/trailnest-header-logo.svg" alt="TrailNest home">
-    </a>
+      <a href="./registration.html" class="plan-btn">Registration</a>
 
-    <nav class="destination-nav nav-page" id="navigation">
-      <ul>
-        <li><a href="./index.html">HOME</a></li>
-        <li><a href="./destinations.html" aria-current="page">DESTINATIONS</a></li>
-        <li><a href="./aboutus.html">ABOUT US</a></li>
-        <li><a href="./contacts.html">CONTACTS</a></li>
-      </ul>
-    </nav>
-
-    <a href="./registration.html" class="plan-btn">Registration</a>
-
-    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="navigation" aria-expanded="false">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-
-  </header>
-
-  <main>
-
-    <!-- SLIDER -->
-    <section class="slider" aria-label="Travel destinations">
-
-      <img class="slide active" src="./images/Mountain landscape.jpeg" alt="Mountain landscape" fetchpriority="high">
-      <img class="slide" src="./images/Beautiful beach.jpeg" alt="Beautiful beach" decoding="async" hidden>
-      <img class="slide" src="./images/Green forest.jpeg" alt="Green forest" decoding="async" hidden>
-
-      <button class="slider-btn prev-btn" type="button" aria-label="Previous slide">
-        <i class="fa-solid fa-chevron-left"></i>
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="navigation"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars"></i>
       </button>
+    </header>
 
-      <button class="slider-btn next-btn" type="button" aria-label="Next slide">
-        <i class="fa-solid fa-chevron-right"></i>
-      </button>
+    <main>
+      <!-- SLIDER -->
+      <section class="slider" aria-label="Travel destinations">
+        <img
+          class="slide active"
+          src="./images/Mountain landscape.jpeg"
+          alt="Mountain landscape"
+          fetchpriority="high"
+        />
+        <img
+          class="slide"
+          src="./images/Beautiful beach.jpeg"
+          alt="Beautiful beach"
+          decoding="async"
+          hidden
+        />
+        <img
+          class="slide"
+          src="./images/Green forest.jpeg"
+          alt="Green forest"
+          decoding="async"
+          hidden
+        />
 
-      <p class="slide-counter">1 / 3</p>
+        <button
+          class="slider-btn prev-btn"
+          type="button"
+          aria-label="Previous slide"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
 
-    </section>
+        <button
+          class="slider-btn next-btn"
+          type="button"
+          aria-label="Next slide"
+        >
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
 
-    <!-- DESTINATIONS -->
-    <section class="destinations">
+        <p class="slide-counter">1 / 3</p>
+      </section>
 
-      <h2>Choose Your Adventure</h2>
+      <!-- DESTINATIONS -->
+      <section class="destinations">
+        <h2>Choose Your Adventure</h2>
 
-      <div class="cards-container">
+        <div class="cards-container">
+          <!-- MOUNTAIN CARD -->
+          <article class="travel-card">
+            <img
+              src="./images/mountin land.jpeg"
+              alt="Mountain hiking adventure"
+              loading="lazy"
+              decoding="async"
+            />
 
-        <!-- MOUNTAIN CARD -->
-        <article class="travel-card">
-          <img src="./images/mountin land.jpeg" alt="Mountain hiking adventure" loading="lazy" decoding="async">
+            <h3>Mountain Adventures</h3>
+            <p>Explore beautiful mountains, hiking trails and amazing views.</p>
 
-          <h3>Mountain Adventures</h3>
-          <p>Explore beautiful mountains, hiking trails and amazing views.</p>
+            <div class="tour-purchase">
+              <p class="tour-price">$290 <span>/ person</span></p>
+              <a class="buy-btn" href="./booking.html?tour=290">Book Now</a>
+            </div>
+          </article>
 
-          <div class="tour-purchase">
-            <p class="tour-price">$290 <span>/ person</span></p>
-            <a class="buy-btn" href="./booking.html?tour=290">Book Now</a>
-          </div>
-        </article>
+          <!-- BEACH CARD -->
+          <article class="travel-card">
+            <img
+              src="./images/Beautiful beach.jpeg"
+              alt="Beautiful tropical beach"
+              loading="lazy"
+              decoding="async"
+            />
 
-        <!-- BEACH CARD -->
-        <article class="travel-card">
-          <img src="./images/Beautiful beach.jpeg" alt="Beautiful tropical beach" loading="lazy" decoding="async">
+            <h3>Beach Escapes</h3>
+            <p>Relax on beautiful beaches and enjoy crystal-clear water.</p>
 
-          <h3>Beach Escapes</h3>
-          <p>Relax on beautiful beaches and enjoy crystal-clear water.</p>
+            <div class="tour-purchase">
+              <p class="tour-price">$350 <span>/ person</span></p>
+              <a class="buy-btn" href="./booking.html?tour=350">Book Now</a>
+            </div>
+          </article>
 
-          <div class="tour-purchase">
-            <p class="tour-price">$350 <span>/ person</span></p>
-            <a class="buy-btn" href="./booking.html?tour=350">Book Now</a>
-          </div>
-        </article>
+          <!-- NATURE CARD -->
+          <article class="travel-card">
+            <img
+              src="./images/Green forest.jpeg"
+              alt="Beautiful green forest"
+              loading="lazy"
+              decoding="async"
+            />
 
-        <!-- NATURE CARD -->
-        <article class="travel-card">
-          <img src="./images/Green forest.jpeg" alt="Beautiful green forest" loading="lazy" decoding="async">
+            <h3>Nature and Wildlife</h3>
+            <p>Discover green forests, waterfalls and wild animals.</p>
 
-          <h3>Nature and Wildlife</h3>
-          <p>Discover green forests, waterfalls and wild animals.</p>
+            <div class="tour-purchase">
+              <p class="tour-price">$210 <span>/ person</span></p>
+              <a class="buy-btn" href="./booking.html?tour=210">Book Now</a>
+            </div>
+          </article>
 
-          <div class="tour-purchase">
-            <p class="tour-price">$210 <span>/ person</span></p>
-            <a class="buy-btn" href="./booking.html?tour=210">Book Now</a>
-          </div>
-        </article>
+          <!-- CITY CARD -->
+          <article class="travel-card">
+            <img src="./images/city.jpeg" alt="city" />
 
-        <!-- CITY CARD -->
-        <article class="travel-card">
-          <img src="./images/city.jpeg" alt="city" >
+            <h3>City Breaks</h3>
+            <p>Visit exciting cities, discover cultures and landmarks.</p>
 
-          <h3>City Breaks</h3>
-          <p>Visit exciting cities, discover cultures and landmarks.</p>
+            <div class="tour-purchase">
+              <p class="tour-price">$180 <span>/ person</span></p>
+              <a class="buy-btn" href="./booking.html?tour=180">Book Now</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
 
-          <div class="tour-purchase">
-            <p class="tour-price">$180 <span>/ person</span></p>
-            <a class="buy-btn" href="./booking.html?tour=180">Book Now</a>
-          </div>
-        </article>
+    <!-- FOOTER -->
+    <footer class="about-footer">
+      <p>© 2026 TrailNest. All rights reserved.</p>
+    </footer>
 
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="about-footer">
-    <p>© 2026 TrailNest. All rights reserved.</p>
-  </footer>
-
-  <!-- JAVASCRIPT -->
-  <script src="./js/burger.js"></script>
-  <script src="./js/slider.js"></script>
-
-</body>
+    <!-- JAVASCRIPT -->
+    <script src="./js/burger.js"></script>
+    <script src="./js/slider.js"></script>
+  </body>
 </html>
-
