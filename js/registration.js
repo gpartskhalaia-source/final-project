@@ -93,7 +93,7 @@ registration.addEventListener("submit", function (event) {
     togglePassword.setAttribute("aria-pressed", "false");
 
     message.textContent =
-      "Demo registration completed! No account was created.";
+      "Your form has been submitted successfully!";
   } else {
     registration.querySelector('[aria-invalid="true"]').focus();
   }
