@@ -1,66 +1,86 @@
 
-const slides = document.querySelectorAll(".slide");
+// GET HTML ELEMENTS
 
-const prevButton = document.querySelector(".prev-btn");
-const nextButton = document.querySelector(".next-btn");
-const counter = document.querySelector(".slide-counter");
+let slides = document.querySelectorAll('.slide');
 
-if (slides.length > 0 && prevButton && nextButton && counter) {
+let arrowLeft = document.querySelector('.prev-btn');
+let arrowRight = document.querySelector('.next-btn');
+let counter = document.querySelector('.slide-counter');
 
-    let currentSlide = 0;
+let sliderIndex = 0;
 
-    function showSlide(index) {
 
-        slides.forEach(function(slide) {
-            slide.hidden = true;
-            slide.classList.remove("active");
-        });
+// SET SLIDER
 
-        slides[index].hidden = false;
-        slides[index].classList.add("active");
+function setSlider() {
 
-        counter.textContent =
-            `${index + 1} / ${slides.length}`;
-    }
+    slides.forEach(function(slide) {
 
-    function nextSlide() {
+        slide.hidden = true;
 
-        currentSlide++;
+        slide.classList.remove('active');
 
-        if (currentSlide >= slides.length) {
-            currentSlide = 0;
-        }
-
-        showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-
-        currentSlide--;
-
-        if (currentSlide < 0) {
-            currentSlide = slides.length - 1;
-        }
-
-        showSlide(currentSlide);
-    }
-
-    let timer = setInterval(nextSlide, 3000);
-
-    function restartTimer() {
-        clearInterval(timer);
-        timer = setInterval(nextSlide, 3000);
-    }
-
-    nextButton.addEventListener("click", function() {
-        nextSlide();
-        restartTimer();
     });
 
-    prevButton.addEventListener("click", function() {
-        prevSlide();
-        restartTimer();
-    });
+    slides[sliderIndex].hidden = false;
 
-    showSlide(currentSlide);
+    slides[sliderIndex].classList.add('active');
+
+    counter.textContent = `${sliderIndex + 1} / ${slides.length}`;
+
 }
+
+
+// LEFT ARROW
+
+function arrowLeftClick() {
+
+    if (sliderIndex == 0) {
+
+        sliderIndex = slides.length;
+
+    }
+
+    sliderIndex--;
+
+    setSlider();
+
+}
+
+
+// RIGHT ARROW
+
+function arrowRightClick() {
+
+    if (sliderIndex == slides.length - 1) {
+
+        sliderIndex = -1;
+
+    }
+
+    sliderIndex++;
+
+    setSlider();
+
+}
+
+
+// ARROW CLICK EVENTS
+
+arrowLeft.addEventListener('click', arrowLeftClick);
+
+arrowRight.addEventListener('click', arrowRightClick);
+
+
+// AUTOMATIC SLIDER
+
+setInterval(() => {
+
+    arrowRightClick();
+
+}, 3000);
+
+
+// INITIAL SLIDER
+
+setSlider();
