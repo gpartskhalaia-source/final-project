@@ -1,6 +1,6 @@
 // Review
 let currentPage = 1;
-let totalPagesAp = 2;
+let totalPagesAp;
 
 const reviews = [
     "Amazing experience! Beautiful places and wonderful memories.",
@@ -60,6 +60,8 @@ function render(responseData) {
 
     document.getElementById('reviews-list').innerHTML = '';
     document.getElementById('reviews-list').appendChild(fragment);
+
+    totalPagesAp = 2;
 
     document.getElementById('page-number').textContent =
         currentPage + ' / ' + totalPagesAp;
