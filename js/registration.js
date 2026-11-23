@@ -8,8 +8,6 @@ let passwordshow = document.getElementById('password');
 
 let toggleIconEye = document.getElementById('toggleIcon');
 
-let togglePassword = document.getElementById('togglePassword');
-
 
 // Show / Hide Password
 
@@ -23,9 +21,6 @@ function showHidePassword() {
         toggleIconEye.classList.remove('fa-eye');
         toggleIconEye.classList.add('fa-eye-slash');
 
-        togglePassword.setAttribute('aria-label', 'Hide password');
-        togglePassword.setAttribute('aria-pressed', 'true');
-
     } else {
 
         // Hide password
@@ -34,9 +29,6 @@ function showHidePassword() {
         toggleIconEye.classList.remove('fa-eye-slash');
         toggleIconEye.classList.add('fa-eye');
 
-        togglePassword.setAttribute('aria-label', 'Show password');
-        togglePassword.setAttribute('aria-pressed', 'false');
-
     }
 
 }
@@ -44,9 +36,21 @@ function showHidePassword() {
 
 // Click event
 
-togglePassword.addEventListener('click', showHidePassword);
+toggleIconEye.addEventListener('click', showHidePassword);
 
 
+// Keyboard accessibility
+
+toggleIconEye.addEventListener('keydown', function(event) {
+
+    if (event.key === 'Enter' || event.key === ' ') {
+
+        event.preventDefault();
+
+        showHidePassword();
+    }
+
+});
 
 
 // =================================
@@ -55,14 +59,10 @@ togglePassword.addEventListener('click', showHidePassword);
 
 let registration = document.getElementById('registration');
 
-let message = document.getElementById('form-message');
-
 
 registration.addEventListener('submit', function(event) {
 
     event.preventDefault();
-
-    message.textContent = '';
 
     let errors = {
 
@@ -70,9 +70,7 @@ registration.addEventListener('submit', function(event) {
 
     let username = document.getElementById('username').value.trim();
 
-    let emailInput = document.getElementById('email');
-
-    let email = emailInput.value.trim();
+    let email = document.getElementById('email').value.trim();
 
     let password = document.getElementById('password').value;
 
@@ -99,7 +97,7 @@ registration.addEventListener('submit', function(event) {
 
         errors.email = "Email can't be empty";
 
-    } else if (emailInput.validity.typeMismatch) {
+    } else if (!document.getElementById('email').validity.valid) {
 
         errors.email = "Please enter a valid email address";
     }
@@ -157,21 +155,24 @@ registration.addEventListener('submit', function(event) {
 
     // ADD / REMOVE ERROR CLASS
 
-    let fields = ['username', 'email', 'password', 'password2'];
+    document.getElementById('username').classList.toggle(
+        'error',
+        !!errors.username
+    );
 
-    fields.forEach(function(field) {
+    document.getElementById('email').classList.toggle(
+        'error',
+        !!errors.email
+    );
 
-        let input = document.getElementById(field);
+    document.getElementById('password').classList.toggle(
+        'error',
+        !!errors.password
+    );
 
-        input.classList.toggle('error', !!errors[field]);
-
-        input.setAttribute('aria-invalid', String(!!errors[field]));
-
-    });
-
-    document.getElementById('checkagree').setAttribute(
-        'aria-invalid',
-        String(!!errors.agree)
+    document.getElementById('password2').classList.toggle(
+        'error',
+        !!errors.password2
     );
 
 
@@ -179,22 +180,26 @@ registration.addEventListener('submit', function(event) {
 
     if (Object.keys(errors).length === 0) {
 
+        alert('Your form has been submitted successfully!');
+
+        // Clear all input fields
         registration.reset();
+
+        // Clear error messages
+        document.querySelectorAll('.errorText').forEach(function(error) {
+            error.textContent = '';
+        });
+
+        // Remove error styles
+        document.querySelectorAll('input').forEach(function(input) {
+            input.classList.remove('error');
+        });
 
         // Reset eye icon
         passwordshow.type = 'password';
 
         toggleIconEye.classList.remove('fa-eye-slash');
         toggleIconEye.classList.add('fa-eye');
-
-        togglePassword.setAttribute('aria-label', 'Show password');
-        togglePassword.setAttribute('aria-pressed', 'false');
-
-        message.textContent = 'Your form has been submitted successfully!';
-
-    } else {
-
-        registration.querySelector('[aria-invalid="true"]').focus();
 
     }
 
