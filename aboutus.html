@@ -2,10 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Travel Web Page" />
-    <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <meta name="author" content="Gvantsa Partskhalaia" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About Us | TrailNest</title>
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Learn about TrailNest, our passion for travel, nature, and unforgettable adventures."
+    />
+    <meta name="author" content="Gvantsa Partskhalaia" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -23,27 +29,24 @@
       content="https://gpartskhalaia-source.github.io/final-project/aboutus.html"
     />
 
-    <meta
-      name="description"
-      content="Learn about TrailNest, our passion for travel, nature, and unforgettable adventures."
-    />
-
-    <title>About Us | TrailNest</title>
-
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/uboutus.css" />
-
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/uboutus.css" />
   </head>
 
   <body>
+    <!-- HEADER -->
     <header class="about-header">
       <a href="./index.html">
         <img
@@ -53,9 +56,17 @@
         />
       </a>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
-        <i class="fa-solid fa-bars"></i>
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="navigation"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
       </button>
+
       <nav
         class="about-nav nav-page"
         id="navigation"
@@ -65,7 +76,7 @@
           <li><a href="./index.html">HOME</a></li>
           <li><a href="./destinations.html">DESTINATIONS</a></li>
           <li>
-            <a href="./aboutus.html" aria-current="page">ABOUT US</a>
+            <a href="./aboutus.html" aria-current="page"> ABOUT US </a>
           </li>
           <li><a href="./contacts.html">CONTACTS</a></li>
         </ul>
@@ -75,6 +86,7 @@
     </header>
 
     <main>
+      <!-- INTRO -->
       <section class="about-intro">
         <h1>About TrailNest</h1>
 
@@ -84,6 +96,7 @@
         </p>
       </section>
 
+      <!-- OUR STORY -->
       <section class="our-story">
         <div class="story-text">
           <h2>Our Story</h2>
@@ -103,10 +116,13 @@
           <img
             src="./images/fcaea7f1-0116-42c1-94dc-661eeafde280.png"
             alt="Traveler exploring a mountain landscape"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </section>
 
+      <!-- OUR VALUES -->
       <section class="our-values">
         <h2>What We Believe In</h2>
 
@@ -140,6 +156,7 @@
         </div>
       </section>
 
+      <!-- CALL TO ACTION -->
       <section class="about-cta">
         <h2>Ready for Your Next Adventure?</h2>
 
@@ -154,10 +171,12 @@
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="about-footer">
       <p>© 2026 TrailNest. All rights reserved.</p>
     </footer>
 
+    <!-- JAVASCRIPT -->
     <script src="./js/burger.js"></script>
   </body>
 </html>
