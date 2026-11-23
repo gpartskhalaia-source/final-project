@@ -2,12 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Travel Web Page" />
-    <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <meta name="author" content="Gvantsa Partskhalaia" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Registration | TrailNest</title>
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Join TrailNest and start exploring exciting travel destinations and adventures."
+    />
+    <meta name="author" content="Gvantsa Partskhalaia" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -25,6 +29,7 @@
       content="https://gpartskhalaia-source.github.io/final-project/registration.html"
     />
 
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -35,19 +40,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/registration.css" />
   </head>
 
   <body>
     <main class="registration">
-      <a class="back-link" href="./index.html">← Back to Home</a>
+      <a class="back-link" href="./index.html"> ← Back to Home </a>
 
       <h1>Join TrailNest</h1>
       <p class="description">Your next adventure starts here.</p>
 
       <form id="registration" novalidate>
+        <!-- USERNAME -->
         <div class="form-group">
           <label for="username">Username</label>
+
           <input
             type="text"
             id="username"
@@ -56,11 +64,14 @@
             aria-describedby="error-username"
             required
           />
+
           <p class="errorText" id="error-username"></p>
         </div>
 
+        <!-- EMAIL -->
         <div class="form-group">
           <label for="email">Email address</label>
+
           <input
             type="email"
             id="email"
@@ -69,9 +80,11 @@
             aria-describedby="error-email"
             required
           />
+
           <p class="errorText" id="error-email"></p>
         </div>
 
+        <!-- PASSWORD -->
         <div class="form-group">
           <label for="password">Password</label>
 
@@ -100,8 +113,10 @@
           <p class="errorText" id="error-password"></p>
         </div>
 
+        <!-- CONFIRM PASSWORD -->
         <div class="form-group">
           <label for="password2">Confirm password</label>
+
           <input
             type="password"
             id="password2"
@@ -110,9 +125,11 @@
             aria-describedby="error-password2"
             required
           />
+
           <p class="errorText" id="error-password2"></p>
         </div>
 
+        <!-- AGREEMENT -->
         <div class="agree-group">
           <label for="checkagree">
             <input
@@ -122,18 +139,20 @@
               aria-describedby="error-agree"
               required
             />
-            I understand this is a demo registration.
+            I agree to continue with registration.
           </label>
 
           <p class="errorText" id="error-agree"></p>
         </div>
 
+        <!-- SUBMIT -->
         <button class="register-btn" type="submit">Register</button>
 
         <p id="form-message" role="status"></p>
       </form>
     </main>
 
+    <!-- JAVASCRIPT -->
     <script src="./js/registration.js"></script>
   </body>
 </html>
