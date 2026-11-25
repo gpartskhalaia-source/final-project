@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
 }
@@ -12,11 +11,11 @@ body {
   flex-direction: column;
 }
 
-/* HEADER */
+/* MOBILE-FIRST */
 
 .booking-header {
   background-color: #102a3a;
-  padding: 20px 40px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,13 +35,13 @@ body {
 .booking-container {
   width: 90%;
   max-width: 800px;
-  margin: 50px auto;
+  margin: 30px auto;
   text-align: center;
   flex: 1;
 }
 
 .booking-container h1 {
-  font-size: 36px;
+  font-size: 28px;
   color: #102a3a;
   margin-bottom: 15px;
 }
@@ -60,7 +59,7 @@ body {
 
 #tours {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
   margin-bottom: 30px;
 }
@@ -117,6 +116,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -162,27 +162,27 @@ body {
   padding: 25px;
 }
 
-/* MOBILE */
+/* TABLET AND DESKTOP */
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .booking-header {
-    padding: 20px;
+    padding: 20px 40px;
   }
 
   .booking-container {
-    margin: 30px auto;
+    margin: 50px auto;
   }
 
   .booking-container h1 {
-    font-size: 28px;
+    font-size: 36px;
   }
 
   #tours {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   #bookings p {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 }
 

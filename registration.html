@@ -40,10 +40,45 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/registration.css" />
   </head>
 
   <body>
+    <header class="registration-header">
+      <a href="./index.html">
+        <img
+          class="registration-logo"
+          src="./images/trailnest-header-logo.svg"
+          alt="TrailNest home"
+        />
+      </a>
+
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="navigation"
+      >
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <nav class="registration-nav nav-page" id="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./destinations.html">DESTINATIONS</a></li>
+          <li><a href="./aboutus.html">ABOUT US</a></li>
+          <li><a href="./contacts.html">CONTACTS</a></li>
+        </ul>
+      </nav>
+
+      <a class="plan-btn" href="./registration.html" aria-current="page">
+        Registration
+      </a>
+    </header>
+
     <main class="registration">
       <a class="back-link" href="./index.html"> ← Back to Home </a>
 
@@ -151,7 +186,12 @@
       </form>
     </main>
 
+    <footer class="registration-footer">
+      <p>&copy; 2026 TrailNest. All rights reserved.</p>
+    </footer>
+
     <!-- JAVASCRIPT -->
+    <script src="./js/burger.js"></script>
     <script src="./js/registration.js"></script>
   </body>
 </html>

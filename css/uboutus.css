@@ -15,6 +15,8 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/* MOBILE-FIRST*/
+
 .about-header {
   position: relative;
   display: -webkit-box;
@@ -26,28 +28,61 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
-  padding: 20px 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
   background-color: #102a3a;
 }
 
 .about-logo {
   display: block;
-  width: 180px;
+  width: 140px;
 }
 
 .menu-btn {
+  display: block;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  width: 44px;
+  height: 44px;
+  margin-right: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.about-nav {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 25px;
+  background-color: #102a3a;
+  z-index: 100;
+}
+
+.about-nav.open {
+  display: block;
 }
 
 .about-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 25px;
+  gap: 20px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -75,13 +110,20 @@ body {
   text-decoration: none;
 }
 
+.about-header .plan-btn {
+  width: 100%;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
 .plan-btn:hover,
 .explore-btn:hover {
   background-color: white;
 }
 
 .about-intro {
-  padding: 70px 20px;
+  padding: 40px 20px;
   background-color: #f2f8f4;
   text-align: center;
 }
@@ -89,6 +131,7 @@ body {
 .about-intro h1 {
   margin: 0 0 20px;
   color: #102a3a;
+  font-size: 32px;
 }
 
 .about-intro p,
@@ -101,13 +144,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 25px;
+  padding: 40px 20px;
 }
 
 .story-text,
@@ -115,6 +162,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  width: 100%;
   min-width: 0;
 }
 
@@ -126,7 +174,7 @@ body {
 .story-image img {
   display: block;
   width: 100%;
-  height: 350px;
+  height: 250px;
   border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -146,6 +194,8 @@ body {
 .values-container {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
   gap: 25px;
   max-width: 1200px;
   margin: 0 auto;
@@ -188,6 +238,12 @@ body {
   margin: 0 0 20px;
 }
 
+.story-text h2,
+.our-values h2,
+.about-cta h2 {
+  font-size: 28px;
+}
+
 .about-cta p {
   margin-bottom: 30px;
   line-height: 1.8;
@@ -210,100 +266,7 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
-@media (max-width: 767px) {
-  .about-header {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 15px;
-    padding: 20px;
-  }
-
-  .about-logo {
-    width: 140px;
-  }
-
-  .menu-btn {
-    display: block;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-    width: 44px;
-    height: 44px;
-    margin-right: auto;
-    padding: 0;
-    border: none;
-    background: transparent;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-  }
-
-  .about-header .plan-btn {
-    width: 100%;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-
-  .about-nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 25px;
-    background-color: #102a3a;
-    z-index: 100;
-  }
-
-  .about-nav.open {
-    display: block;
-  }
-
-  .about-nav ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 20px;
-  }
-
-  .about-intro {
-    padding: 40px 20px;
-  }
-
-  .about-intro h1 {
-    font-size: 32px;
-  }
-
-  .our-story {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 40px 20px;
-  }
-
-  .story-text,
-  .story-image {
-    width: 100%;
-  }
-
-  .story-image img {
-    height: 250px;
-  }
-
-  .story-text h2,
-  .our-values h2,
-  .about-cta h2 {
-    font-size: 28px;
-  }
-
-  .values-container {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
-}
+/* TABLET */
 
 @media (min-width: 768px) {
   .about-header {
@@ -311,11 +274,67 @@ button:focus-visible {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 20px;
     padding: 25px;
+  }
+
+  .about-logo {
+    width: 180px;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .about-nav {
+    display: block;
+    position: static;
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+    z-index: auto;
+  }
+
+  .about-nav ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 25px;
+  }
+
+  .about-header .plan-btn {
+    width: auto;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+
+  .about-intro {
+    padding: 70px 20px;
   }
 
   .about-intro h1 {
     font-size: 44px;
+  }
+
+  .our-story {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 60px 25px;
+  }
+
+  .story-text,
+  .story-image {
+    width: auto;
+  }
+
+  .story-image img {
+    height: 350px;
   }
 
   .story-text h2,
@@ -329,6 +348,8 @@ button:focus-visible {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* DESKTOP */
 
 @media (min-width: 1200px) {
   .about-header {

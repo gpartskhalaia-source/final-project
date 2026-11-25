@@ -402,7 +402,6 @@ button:focus-visible {
     }
 
     .cards-container {
-        -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -445,7 +444,6 @@ button:focus-visible {
     /* DESTINATIONS */
 
     .cards-container {
-        -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     }
 }
